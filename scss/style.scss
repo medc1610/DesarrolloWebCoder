@@ -1,12 +1,12 @@
-$breackpoints:(
+$breakpoints:(
     s: 520px,
     m: 980px,
     l: 1280px,
 );
 
-@mixin media-up($breackpoints){
+@mixin responsive($breakpoint){
 
-    @media screen and (max-width: map-get($breackpoints, $breackpoint )){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint )){
         @content;
     }
 }
@@ -20,6 +20,11 @@ body{
     position: relative;
     padding-bottom: 150px;
     min-height: 100vh;
+
+    @include responsive(m){
+        padding: 0px;
+    }
+
 }
 
 .header{
@@ -61,6 +66,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @include responsive(m){
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+    }
     }  
 }
 
@@ -73,12 +84,33 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @include responsive(m){
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        gap: 15px;
+    }
 }
 
 .galeriaMarcas{
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-items: center;
+
+    @include responsive(l){
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+    }
+
+    @include responsive(m){
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
+    }
 }
 
 .footer{
@@ -90,5 +122,16 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    @include responsive(m){
+        position: relative;
+    }
+
+    @include responsive(s){
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+        position: relative;
+    }
 }
 

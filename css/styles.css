@@ -8,6 +8,11 @@ body {
   padding-bottom: 150px;
   min-height: 100vh;
 }
+@media screen and (max-width: 980px) {
+  body {
+    padding: 0px;
+  }
+}
 
 .header {
   background-color: rgb(42, 44, 161);
@@ -43,6 +48,13 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 980px) {
+  .productosDestacados .productosDestacadosCards {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+  }
+}
 
 .energiaSolar {
   margin-left: 100px;
@@ -54,11 +66,35 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 980px) {
+  .energiaSolar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 15px;
+  }
+}
 
 .galeriaMarcas {
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-items: center;
+}
+@media screen and (max-width: 1280px) {
+  .galeriaMarcas {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 980px) {
+  .galeriaMarcas {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+  }
 }
 
 .footer {
@@ -70,6 +106,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+@media screen and (max-width: 980px) {
+  .footer {
+    position: relative;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
