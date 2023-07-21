@@ -1,3 +1,16 @@
+$breackpoints:(
+    s: 520px,
+    m: 980px,
+    l: 1280px,
+);
+
+@mixin media-up($breackpoints){
+
+    @media screen and (max-width: map-get($breackpoints, $breackpoint )){
+        @content;
+    }
+}
+
 * {
     margin: 0;
     list-style: none;
