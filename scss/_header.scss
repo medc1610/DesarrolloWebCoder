@@ -1,0 +1,21 @@
+.header{
+    background-color: rgb(42, 44, 161);
+    color: aliceblue;
+    margin: 0px;
+    height: 50px;
+}
+
+.logoPrincipal{
+    margin: 0px;
+}
+
+.navbar-collapse {
+        justify-content: space-around;
+}
+
+.navbar-nav{
+    &:hover{
+        background-color: rgba(55, 0, 255, 0.37);
+        border-radius: 10px;
+    }   
+}

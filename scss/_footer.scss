@@ -1,0 +1,21 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(27, 27, 27, 0.575);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include responsive(m){
+        position: relative;
+    }
+
+    @include responsive(s){
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+        position: relative;
+    }
+}
