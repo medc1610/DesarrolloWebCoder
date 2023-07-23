@@ -1,0 +1,22 @@
+$opacidades:(
+    maxima:0.2,
+    media:0.5,
+    baja:0.8,
+    nula:1,
+);
+
+
+@mixin colorOpacidad($color, $opacidad){
+
+   
+
+    $colores:( 
+    azulMarino: rgba(4, 47, 64, map-get($opacidades, $opacidad)),
+    verde1: rgba(62, 140, 73, map-get($opacidades, $opacidad)),
+    verde2: rgba(90, 191, 86, map-get($opacidades, $opacidad)),
+    verde3: rgba(108, 217, 78, map-get($opacidades, $opacidad)),
+    verde4: rgba(118, 242, 61, map-get($opacidades, $opacidad)),
+    );
+
+    background-color: map-get($colores , $color );
+}

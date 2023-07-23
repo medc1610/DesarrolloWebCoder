@@ -1,32 +1,9 @@
-$breakpoints:(
-    s: 520px,
-    m: 980px,
-    l: 1280px,
-);
+@import "../elements/responsive";
+@import "../elements/corteImg";
 
-@mixin imagenRecorte{
-    height: 500px;
-	object-fit: cover;
-	background-color: black;
-
-    @include responsive(m){
-        height: 400px;
-    }
-
-    @include responsive(s){
-        height: 300px;
-    }
-}
-
-@mixin responsive($breakpoint){
-    @media screen and (max-width: map-get($breakpoints, $breakpoint )){
-        @content;
-    }
-}
 
 * {
     margin: 0;
-    list-style: none;
 }
 
 body{
@@ -113,8 +90,6 @@ body{
            
         }
 
-        
-    
         @include responsive(m){
             display: grid;
             grid-template-columns: auto;

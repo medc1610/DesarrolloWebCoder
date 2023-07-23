@@ -1,0 +1,149 @@
+@import "../elements/responsive";
+@import "../elements/colors";
+
+.contenidoSobreNosotros{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr auto 1fr ; 
+    grid-template-areas: 
+    "titulo titulo"
+    "texto-1 imagen"
+    "titulo2 imagen"
+    "texto2 imagen"; 
+    gap: 20px;
+
+    margin: 50px 30px 50px 30px;
+    @include responsive(m){
+        grid-template-columns: 1fr ; 
+        grid-template-rows: auto auto auto auto auto; 
+        grid-template-areas: 
+        "titulo"
+        "imagen"
+        "texto-1"
+        "titulo2"
+        "texto2"; 
+    }
+
+    h1{
+        display: grid;
+        justify-content: center;
+        grid-area: titulo;
+    }
+
+    .textoSobreNosotros{
+        grid-area: texto-1;
+        text-align: justify;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        padding: 20px;
+        margin-bottom: 35px;
+
+    }
+
+    .tituloValores{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-area: titulo2;
+    }
+    .listaValores{
+        display: grid;
+        grid-area: texto2;
+        
+        ul{
+            list-style: circle;
+        }
+    }
+
+    .imagenSobreNosotros{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-area: imagen;
+
+        img {
+            height: 350px;
+            border-radius: 15px;
+        
+            @include responsive(l){
+                height: 300px;
+            }
+
+            @include responsive(s){
+                height: 200px;
+            }
+
+            @include responsive(xs){
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+
+
+.misionVision{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 400px;
+   margin: 50px 30px 50px 30px;
+   align-items: start;
+   gap: 30px;
+
+   @include responsive(m){
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    }
+
+    .mision{
+        display: grid;
+        padding: 20px;
+        box-shadow: 5px 5px  10px 5px;
+        border: 1.5px solid black;
+        @include colorOpacidad(azulMarino, baja);
+        
+        
+        .tituloMision{
+            display: grid;
+            justify-content: start;
+
+            h1{
+                margin-bottom: 20px;
+                color: whitesmoke;
+            }  
+        }
+
+        .parrafoMision{
+            text-align: justify;
+            color: whitesmoke;
+        }
+    }
+
+    .vision{
+        display: grid;
+        padding: 20px;
+        box-shadow: 5px 5px  10px 5px;
+        border: 1.5px solid black;
+        @include colorOpacidad(verde1, baja);
+
+        .tituloVision{
+            display: grid;
+            justify-content: start;
+
+            h1{
+                margin-bottom: 20px;
+                color: whitesmoke;
+            }    
+        }
+
+        .parrafoVision{
+            text-align: justify;
+            color: whitesmoke;
+        }
+    }
+
+    
+
+}

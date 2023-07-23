@@ -1,0 +1,13 @@
+@mixin imagenRecorte{
+    height: 500px;
+	object-fit: cover;
+	background-color: black;
+
+    @include responsive(m){
+        height: 400px;
+    }
+
+    @include responsive(s){
+        height: 300px;
+    }
+}

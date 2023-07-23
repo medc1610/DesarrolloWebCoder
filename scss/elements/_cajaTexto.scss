@@ -1,0 +1,10 @@
+@mixin cuadroColor{
+    padding: 20px;
+    box-shadow: 5px 5px  10px 5px;
+    border: 1.5px solid black;
+};
+
+@mixin cuadro{
+    box-shadow: 5px 5px  10px 5px;
+    border: 1.5px solid black;
+}

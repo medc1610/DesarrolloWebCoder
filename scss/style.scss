@@ -1,7 +1,9 @@
-@import "./header";
-@import "./index";
-@import "./sobreNosotros";
-@import "./servicios";
-@import "./productos";
-@import "./contacto";
-@import "./footer";
+
+//Paginas
+@import "./content/header";
+@import "./content/index";
+@import "./content/sobreNosotros";
+@import "./content/nuestroTrabajo";
+@import "./content/productos";
+@import "./content/contacto";
+@import "./content/footer";

@@ -1,0 +1,127 @@
+
+@mixin centerGrid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+};
+
+@mixin OrientacionDer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "desc img";
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include responsive(m){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "desc" 
+        "img";
+        gap: 50px;
+    }
+
+    .trabajo{
+        grid-area: desc;
+        display: grid;
+        grid-template-rows: auto auto;
+         
+        @include cuadroColor;
+        @include colorOpacidad(verde4, baja);
+        
+        .tituloTrabajo{
+            @include centerGrid;
+            @include cuadro;
+            @include colorOpacidad(azulMarino, nula);
+
+            h2{
+               color: whitesmoke;
+            }
+        }
+        .descripcionTrabajo{
+            text-align: justify;
+            @include centerGrid;
+            
+        }
+    }
+    .trabajoImg{
+        grid-area: img;
+        @include centerGrid;
+       
+        img{
+            width: 100%;
+        }
+
+        a{
+            width: 50%;
+            border: none;
+            @include colorOpacidad(azulMarino, nula);
+            &:hover{
+                @include colorOpacidad(verde4, baja);
+                color: black
+            }
+        }
+    }
+};
+
+@mixin OrientacionIzq{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "img desc";
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include responsive(m){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "desc" 
+        "img";
+        gap: 50px;
+    }
+
+    .trabajo{
+        grid-area: desc;
+        display: grid;
+        grid-template-rows: auto auto;
+         
+        @include cuadroColor;
+        @include colorOpacidad(azulMarino, baja);
+        
+        .tituloTrabajo{
+            @include centerGrid;
+            @include cuadro;
+            @include colorOpacidad(verde4, baja);
+           
+        }
+        .descripcionTrabajo{
+            text-align: justify;
+            @include centerGrid;
+            color: whitesmoke;
+            
+        }
+    }
+    .trabajoImg{
+        grid-area: img;
+        @include centerGrid;
+       
+        img{
+            width: 100%;
+        }
+
+        a{
+            width: 50%;
+            border: none;
+            @include colorOpacidad(azulMarino, nula);
+            &:hover{
+                @include colorOpacidad(verde4, baja);
+                color: black
+            }
+        }
+    }
+}

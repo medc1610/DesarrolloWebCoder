@@ -1,0 +1,67 @@
+@import "../elements/responsive";
+@import "../elements/gridCenter";
+@import "../elements/separador";
+@import "../elements/colors";
+@import "../elements/cajaTexto";
+// @import "../elements/corteImg";
+
+.nuestrosTrabajos{
+
+    .tituloNuestrosTrabajos{
+
+        h1{
+            @include centerGrid;
+            margin-top: 50px;
+        }
+    }
+    .trabajo1{
+        @include OrientacionDer;
+
+        .trabajoImg{
+            img{
+                width: 80%;
+            }
+        }
+
+
+    }
+    
+    .trabajo2{
+        @include OrientacionIzq;
+
+        .trabajoImg{
+            img{
+                width: 80%;
+            }
+        }
+
+
+    }
+
+    .trabajo3{
+        @include OrientacionDer;
+
+        .trabajoImg{
+            img{
+                width: 80%;
+            }
+        }
+
+    }
+
+    .trabajo4{
+        @include OrientacionIzq;
+
+        .trabajoImg{
+            img{
+                width: 53%;
+            }
+        }
+
+    }
+
+
+    .separador{
+        @include separador;
+    }
+}
