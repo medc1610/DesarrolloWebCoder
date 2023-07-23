@@ -1,0 +1,63 @@
+@import "../elements/responsive";
+@import "../elements/gridCenter";
+@import "../elements/separador";
+@import "../elements/colors";
+@import "../elements/cajaTexto";
+
+
+.productos{
+
+    .tituloProductos{
+        margin: 50px 30px 50px 30px;
+        grid-area: titulo;
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(verde4, baja);
+
+        h1{
+            display: grid;
+            justify-content: center;          
+        }
+    }
+
+    .productosCards{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 50px;
+
+
+        .card-body{
+            display: grid;
+            align-items: end;
+        }
+
+        @include responsive(m){
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        @include responsive(ms){
+            grid-template-columns: 1fr ;
+
+        }
+
+        a{
+            border: none;
+            @include colorOpacidad(azulMarino, nula);
+            &:hover{
+                @include colorOpacidad(verde4, baja);
+                color: black
+            }
+        }
+    } 
+    
+    
+}
+
+.separador{
+    @include separador;
+}

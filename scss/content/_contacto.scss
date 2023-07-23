@@ -1,0 +1,78 @@
+@import "../elements/responsive";
+@import "../elements/gridCenter";
+@import "../elements/separador";
+@import "../elements/colors";
+@import "../elements/cajaTexto";
+
+.contacto{
+    margin: 50px 30px 50px 30px;
+            
+    .tituloContacto{
+
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(azulMarino, baja);
+
+        h1{                    
+            display: grid;
+            justify-content: center;  
+            color: whitesmoke
+        }
+
+    }
+        .formulario{
+            @include centerGrid;
+
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            @include responsive(m){
+                grid-template-columns: 1fr;
+            }
+
+            .form{
+                width: 100%;
+                margin: 50px 30px 50px 30px;
+
+                button{
+
+                    border: none;
+                    margin-top: 20px;
+                    width: 100%;
+                    @include colorOpacidad(azulMarino, nula);
+
+                    &:hover{
+                        @include colorOpacidad(verde4, baja);
+                        color: black;
+                    }
+                    
+                }
+            }
+
+            .imagenContacto{
+                @include centerGrid;
+                img{
+                    width: 80%;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px  10px 5px;
+
+                   
+                }
+            }
+        }
+}
+
+
+
+
+
+@media(max-width:980px){
+    .formulario{
+        display: grid;
+        grid-template-rows:auto auto ;
+    }
+
+    .footer{
+        position: relative;
+    }
+}

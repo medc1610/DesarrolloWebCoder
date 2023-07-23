@@ -1,7 +1,7 @@
 @mixin separador{
     display: grid;
     border: 1px solid black;
-    width: 90%;
+    width: 90% !important;
     margin-top: 50px;
     margin-bottom: 50px;
 }

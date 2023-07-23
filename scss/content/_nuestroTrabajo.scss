@@ -3,15 +3,19 @@
 @import "../elements/separador";
 @import "../elements/colors";
 @import "../elements/cajaTexto";
-// @import "../elements/corteImg";
 
 .nuestrosTrabajos{
-
+margin: 50px 30px 50px 30px;
     .tituloNuestrosTrabajos{
-
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(azulMarino, baja);
         h1{
-            @include centerGrid;
-            margin-top: 50px;
+            
+             display: grid;
+            justify-content: center;  
+            
+            color: whitesmoke
         }
     }
     .trabajo1{
@@ -61,7 +65,9 @@
     }
 
 
-    .separador{
-        @include separador;
-    }
+    
+}
+
+.separador{
+    @include separador;
 }

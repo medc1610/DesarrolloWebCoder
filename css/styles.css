@@ -49,10 +49,19 @@ body {
   }
 }
 
-.productosDestacados {
-  padding: 10px;
-}
 .productosDestacados .tituloDestacado {
+  margin: 50px 30px 50px 30px;
+  grid-area: titulo;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
+}
+.productosDestacados .tituloDestacado h1 {
   display: grid;
   justify-content: center;
 }
@@ -67,6 +76,14 @@ body {
   display: grid;
   align-items: end;
 }
+.productosDestacados .productosDestacadosCards a {
+  border: none;
+  background-color: rgb(4, 47, 64);
+}
+.productosDestacados .productosDestacadosCards a:hover {
+  background-color: rgba(118, 242, 61, 0.8);
+  color: black;
+}
 @media screen and (max-width: 991px) {
   .productosDestacados .productosDestacadosCards {
     display: grid;
@@ -76,8 +93,21 @@ body {
 }
 
 .energiaSolar .tituloDescripcion {
+  margin: 50px 30px 50px 30px;
+  grid-area: titulo;
   display: grid;
   justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgb(4, 47, 64);
+}
+.energiaSolar .tituloDescripcion h1 {
+  display: grid;
+  justify-content: center;
+  color: whitesmoke;
 }
 .energiaSolar .descripcionEnergiaSolar {
   margin-left: 100px;
@@ -119,6 +149,18 @@ body {
   height: 380px;
 }
 .nuestrasMarcas .tituloNuestrasMarcas {
+  margin: 50px 30px 50px 30px;
+  grid-area: titulo;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
+}
+.nuestrasMarcas .tituloNuestrasMarcas h1 {
   display: grid;
   justify-content: center;
 }
@@ -158,71 +200,110 @@ body {
     height: 600px;
   }
 }
+.nuestrasMarcas .separador {
+  display: grid;
+  border: 1px solid black;
+  width: 90% !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 .contenidoSobreNosotros {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr auto 1fr;
-  grid-template-areas: "titulo titulo" "texto-1 imagen" "titulo2 imagen" "texto2 imagen";
-  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   margin: 50px 30px 50px 30px;
 }
-@media screen and (max-width: 991px) {
-  .contenidoSobreNosotros {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "titulo" "imagen" "texto-1" "titulo2" "texto2";
-  }
-}
-.contenidoSobreNosotros h1 {
+.contenidoSobreNosotros .tituloSobreNosotros {
   display: grid;
   justify-content: center;
-  grid-area: titulo;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
 }
-.contenidoSobreNosotros .textoSobreNosotros {
-  grid-area: texto-1;
+.contenidoSobreNosotros .tituloSobreNosotros h1 {
+  display: grid;
+  justify-content: center;
+}
+.contenidoSobreNosotros .sobreNosotros {
+  margin: 50px 30px 50px 30px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(4, 47, 64, 0.8);
+}
+.contenidoSobreNosotros .sobreNosotros .textoSobreNosotros {
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
   text-align: justify;
   display: grid;
   align-items: center;
   justify-items: center;
+  margin: 50px 30px 50px 30px;
+}
+.contenidoSobreNosotros .sobreNosotros .tituloValores {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  margin-bottom: 35px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
 }
-.contenidoSobreNosotros .tituloValores {
+.contenidoSobreNosotros .sobreNosotros .listaValores {
   display: grid;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  grid-area: titulo2;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  margin: 50px 30px 50px 30px;
 }
-.contenidoSobreNosotros .listaValores {
+@media screen and (max-width: 991px) {
+  .contenidoSobreNosotros .sobreNosotros .listaValores {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+.contenidoSobreNosotros .sobreNosotros .listaValores ul {
   display: grid;
-  grid-area: texto2;
-}
-.contenidoSobreNosotros .listaValores ul {
   list-style: circle;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgb(118, 242, 61);
 }
-.contenidoSobreNosotros .imagenSobreNosotros {
+.contenidoSobreNosotros .sobreNosotros .listaValores ul li {
+  margin-left: 25px;
+  font-weight: 500;
+}
+.contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
 }
-.contenidoSobreNosotros .imagenSobreNosotros img {
+.contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
   height: 350px;
   border-radius: 15px;
 }
 @media screen and (max-width: 1280px) {
-  .contenidoSobreNosotros .imagenSobreNosotros img {
+  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
     height: 300px;
   }
 }
 @media screen and (max-width: 580px) {
-  .contenidoSobreNosotros .imagenSobreNosotros img {
+  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
     height: 200px;
   }
 }
 @media screen and (max-width: 400px) {
-  .contenidoSobreNosotros .imagenSobreNosotros img {
+  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
     height: 150px;
   }
 }
@@ -230,7 +311,6 @@ body {
 .misionVision {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px;
   margin: 50px 30px 50px 30px;
   align-items: start;
   gap: 30px;
@@ -249,14 +329,18 @@ body {
   background-color: rgba(4, 47, 64, 0.8);
 }
 .misionVision .mision .tituloMision {
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgb(118, 242, 61);
   display: grid;
   justify-content: start;
+  width: 30%;
 }
 .misionVision .mision .tituloMision h1 {
-  margin-bottom: 20px;
-  color: whitesmoke;
+  margin-left: 10px;
 }
 .misionVision .mision .parrafoMision {
+  margin-top: 15px;
   text-align: justify;
   color: whitesmoke;
 }
@@ -265,27 +349,50 @@ body {
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
   border: 1.5px solid black;
-  background-color: rgba(62, 140, 73, 0.8);
+  background-color: rgba(118, 242, 61, 0.8);
 }
 .misionVision .vision .tituloVision {
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgb(4, 47, 64);
   display: grid;
   justify-content: start;
+  width: 27%;
 }
 .misionVision .vision .tituloVision h1 {
-  margin-bottom: 20px;
+  margin-left: 10px;
   color: whitesmoke;
 }
 .misionVision .vision .parrafoVision {
+  margin-top: 15px;
   text-align: justify;
-  color: whitesmoke;
 }
 
-.nuestrosTrabajos .tituloNuestrosTrabajos h1 {
+.separador {
+  display: grid;
+  border: 1px solid black;
+  width: 90% !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.nuestrosTrabajos {
+  margin: 50px 30px 50px 30px;
+}
+.nuestrosTrabajos .tituloNuestrosTrabajos {
   display: grid;
   justify-content: center;
   align-items: center;
   justify-items: center;
-  margin-top: 50px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(4, 47, 64, 0.8);
+}
+.nuestrosTrabajos .tituloNuestrosTrabajos h1 {
+  display: grid;
+  justify-content: center;
+  color: whitesmoke;
 }
 .nuestrosTrabajos .trabajo1 {
   display: grid;
@@ -547,14 +654,137 @@ body {
 .nuestrosTrabajos .trabajo4 .trabajoImg img {
   width: 53%;
 }
-.nuestrosTrabajos .separador {
+
+.separador {
   display: grid;
   border: 1px solid black;
-  width: 90%;
+  width: 90% !important;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
+.productos .tituloProductos {
+  margin: 50px 30px 50px 30px;
+  grid-area: titulo;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(118, 242, 61, 0.8);
+}
+.productos .tituloProductos h1 {
+  display: grid;
+  justify-content: center;
+}
+.productos .productosCards {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 50px;
+}
+.productos .productosCards .card-body {
+  display: grid;
+  align-items: end;
+}
+@media screen and (max-width: 991px) {
+  .productos .productosCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productos .productosCards {
+    grid-template-columns: 1fr;
+  }
+}
+.productos .productosCards a {
+  border: none;
+  background-color: rgb(4, 47, 64);
+}
+.productos .productosCards a:hover {
+  background-color: rgba(118, 242, 61, 0.8);
+  color: black;
+}
+
+.separador {
+  display: grid;
+  border: 1px solid black;
+  width: 90% !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contacto {
+  margin: 50px 30px 50px 30px;
+}
+.contacto .tituloContacto {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 5px;
+  border: 1.5px solid black;
+  background-color: rgba(4, 47, 64, 0.8);
+}
+.contacto .tituloContacto h1 {
+  display: grid;
+  justify-content: center;
+  color: whitesmoke;
+}
+.contacto .formulario {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+@media screen and (max-width: 991px) {
+  .contacto .formulario {
+    grid-template-columns: 1fr;
+  }
+}
+.contacto .formulario .form {
+  width: 100%;
+  margin: 50px 30px 50px 30px;
+}
+.contacto .formulario .form button {
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(4, 47, 64);
+}
+.contacto .formulario .form button:hover {
+  background-color: rgba(118, 242, 61, 0.8);
+  color: black;
+}
+.contacto .formulario .imagenContacto {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.contacto .formulario .imagenContacto img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px;
+}
+
+@media (max-width: 980px) {
+  .formulario {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+  .footer {
+    position: relative;
+  }
+}
 .footer {
   position: absolute;
   bottom: 0;

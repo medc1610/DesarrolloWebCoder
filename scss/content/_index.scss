@@ -1,5 +1,9 @@
 @import "../elements/responsive";
 @import "../elements/corteImg";
+@import "../elements/gridCenter";
+@import "../elements/colors";
+@import "../elements/cajaTexto";
+@import "../elements/separador";
 
 
 * {
@@ -21,11 +25,18 @@ body{
 }
 
 .productosDestacados{
-    padding: 10px;
 
     .tituloDestacado{
-        display: grid;
-        justify-content: center;
+        margin: 50px 30px 50px 30px;
+        grid-area: titulo;
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(verde4, baja);
+
+        h1{
+            display: grid;
+            justify-content: center;          
+        }
     }
 
     .productosDestacadosCards{
@@ -41,6 +52,15 @@ body{
         align-items: end;
     }
 
+    a{
+        border: none;
+        @include colorOpacidad(azulMarino, nula);
+        &:hover{
+            @include colorOpacidad(verde4, baja);
+            color: black
+        }
+    }
+
     @include responsive(m){
         display: grid;
         grid-template-rows: auto auto auto;
@@ -53,8 +73,17 @@ body{
 
 
     .tituloDescripcion{
-        display: grid;
-        justify-content: center;
+        margin: 50px 30px 50px 30px;
+        grid-area: titulo;
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(azulMarino, nula);
+
+        h1{
+            display: grid;
+            justify-content: center; 
+            color: whitesmoke;         
+        }
     }
 
     .descripcionEnergiaSolar{
@@ -105,8 +134,16 @@ body{
     height: 380px;
 
     .tituloNuestrasMarcas{
-        display: grid;
-        justify-content: center;
+        margin: 50px 30px 50px 30px;
+        grid-area: titulo;
+        @include centerGrid;
+        @include cuadroColor;
+        @include colorOpacidad(verde4, baja);
+
+        h1{
+            display: grid;
+            justify-content: center;          
+        }
         
     }
 
@@ -143,6 +180,10 @@ body{
             height:600px;
         }
 
+    }
+
+    .separador{
+        @include separador;
     }
 }
 
