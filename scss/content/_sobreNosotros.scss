@@ -22,79 +22,56 @@
     }
 
     .sobreNosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
         margin: 50px 30px 50px 30px;
-        @include cuadroColor;
-        @include colorOpacidad(azulMarino, baja);
+        gap: 10px;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas: 
+        "descripcion img"
+        "titulo img"
+        "lista img";
+
+        @include responsive(m){           
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+            "descripcion"
+            "titulo"
+            "lista"
+            "img";
+        }
 
         .textoSobreNosotros{
-            @include cuadroColor;
-            @include colorOpacidad(verde4, baja);
+            grid-area: descripcion;
             text-align: justify;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            margin: 50px 30px 50px 30px;
-            
         }
-    
+
         .tituloValores{
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            @include cuadroColor;
-            @include colorOpacidad(verde4, baja);
-        }
-        .listaValores{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-area: titulo;
+            display: grid;    
             justify-items: center;
-            align-items: center;
-            @include cuadroColor;
-            
-            @include responsive(m){
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            margin: 50px 30px 50px 30px;
-            ul{
-                display: grid;
-                list-style: circle;
-                @include cuadroColor;
-                @include colorOpacidad(verde4, nula);
-                
-
-                li{
-                    margin-left: 25px;
-                    font-weight: 500;
-                }
-            }
         }
-    
+
+        .listaValores{
+            grid-area: lista;
+        }
+
         .imagenSobreNosotros{
-            display: grid;
-            justify-content: center;
-            align-items: center;
-    
-            img {
-                height: 350px;
-                border-radius: 15px;
-            
-                @include responsive(l){
-                    height: 300px;
-                }
-    
-                @include responsive(s){
-                    height: 200px;
-                }
-    
-                @include responsive(xs){
-                    height: 150px;
-                }
+            grid-area: img;
+            display: grid;    
+            justify-items: center;
+
+            img{
+                width: 70%;
             }
         }
-
     }
+    
+
+    
 
     
 }
@@ -125,7 +102,6 @@
             @include colorOpacidad(verde4, nula);
             display: grid;
             justify-content: start;
-            width: 30%;
 
             h1{
                 margin-left: 10px;
@@ -149,7 +125,6 @@
             @include colorOpacidad(azulMarino, nula);
             display: grid;
             justify-content: start;
-            width: 27%;
 
             h1{
                 margin-left: 10px;

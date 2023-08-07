@@ -1,21 +1,89 @@
 .header {
-  background-color: rgb(42, 44, 161);
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   color: aliceblue;
   margin: 0px;
-  height: 50px;
+  height: 115px;
+  background-color: rgb(4, 47, 64);
+}
+@media screen and (max-width: 725px) {
+  .header {
+    grid-template-columns: auto auto;
+  }
+}
+.header .logoPrincipal img {
+  width: 100px;
+  margin: 10px;
+}
+.header .tituloLogo {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 30px 30px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  font-family: monospace;
+}
+.header .tituloLogo h2 {
+  font-weight: bolder;
+}
+@media screen and (max-width: 725px) {
+  .header .tituloLogo {
+    display: none;
+  }
+}
+.header .redesSociales {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: end;
+  margin-left: 25px;
+  gap: 55px;
+  margin-right: 50px;
+}
+@media screen and (max-width: 650px) {
+  .header .redesSociales {
+    gap: 20px;
+  }
+}
+.header .redesSociales .logo i {
+  font-size: 35px;
+  color: whitesmoke;
+}
+.header .redesSociales .logo i:hover {
+  color: rgb(118, 242, 61);
+}
+@media screen and (max-width: 400px) {
+  .header .redesSociales .logo i {
+    font-size: 25px;
+  }
 }
 
-.logoPrincipal {
-  margin: 0px;
+nav {
+  background-color: rgb(4, 47, 64);
 }
-
-.navbar-collapse {
+nav .navbar {
+  background-color: rgb(4, 47, 64);
+}
+nav .navbar-collapse {
   justify-content: space-around;
 }
-
-.navbar-nav:hover {
-  background-color: rgba(55, 0, 255, 0.37);
-  border-radius: 10px;
+nav .navbar-nav {
+  padding: 0px;
+}
+nav .navbar-nav:hover {
+  background-color: rgb(118, 242, 61);
+}
+nav .navbar-nav:hover .nav-item a {
+  color: black !important;
+}
+nav .navbar-nav .nav-item a {
+  color: whitesmoke !important;
+  font-family: monospace;
+  font-size: 20px;
+}
+nav .navbar-toggler {
+  background-color: rgb(118, 242, 61);
 }
 
 * {
@@ -58,6 +126,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -101,6 +170,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgb(4, 47, 64);
 }
@@ -157,6 +227,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -221,6 +292,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -229,83 +301,41 @@ body {
   justify-content: center;
 }
 .contenidoSobreNosotros .sobreNosotros {
-  margin: 50px 30px 50px 30px;
-  padding: 20px;
-  box-shadow: 5px 5px 10px 5px;
-  border: 1.5px solid black;
-  background-color: rgba(4, 47, 64, 0.8);
-}
-.contenidoSobreNosotros .sobreNosotros .textoSobreNosotros {
-  padding: 20px;
-  box-shadow: 5px 5px 10px 5px;
-  border: 1.5px solid black;
-  background-color: rgba(118, 242, 61, 0.8);
-  text-align: justify;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  margin: 50px 30px 50px 30px;
-}
-.contenidoSobreNosotros .sobreNosotros .tituloValores {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 5px 5px 10px 5px;
-  border: 1.5px solid black;
-  background-color: rgba(118, 242, 61, 0.8);
-}
-.contenidoSobreNosotros .sobreNosotros .listaValores {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 5px 5px 10px 5px;
-  border: 1.5px solid black;
+  grid-template-rows: auto auto auto;
   margin: 50px 30px 50px 30px;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "descripcion img" "titulo img" "lista img";
 }
 @media screen and (max-width: 991px) {
-  .contenidoSobreNosotros .sobreNosotros .listaValores {
+  .contenidoSobreNosotros .sobreNosotros {
     grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "descripcion" "titulo" "lista" "img";
   }
 }
-.contenidoSobreNosotros .sobreNosotros .listaValores ul {
-  display: grid;
-  list-style: circle;
-  padding: 20px;
-  box-shadow: 5px 5px 10px 5px;
-  border: 1.5px solid black;
-  background-color: rgb(118, 242, 61);
+.contenidoSobreNosotros .sobreNosotros .textoSobreNosotros {
+  grid-area: descripcion;
+  text-align: justify;
 }
-.contenidoSobreNosotros .sobreNosotros .listaValores ul li {
-  margin-left: 25px;
-  font-weight: 500;
+.contenidoSobreNosotros .sobreNosotros .tituloValores {
+  grid-area: titulo;
+  display: grid;
+  justify-items: center;
+}
+.contenidoSobreNosotros .sobreNosotros .listaValores {
+  grid-area: lista;
 }
 .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros {
+  grid-area: img;
   display: grid;
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
 }
 .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
-  height: 350px;
-  border-radius: 15px;
-}
-@media screen and (max-width: 1280px) {
-  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
-    height: 300px;
-  }
-}
-@media screen and (max-width: 580px) {
-  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
-    height: 200px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .contenidoSobreNosotros .sobreNosotros .imagenSobreNosotros img {
-    height: 150px;
-  }
+  width: 70%;
 }
 
 .misionVision {
@@ -325,16 +355,17 @@ body {
   display: grid;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(4, 47, 64, 0.8);
 }
 .misionVision .mision .tituloMision {
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgb(118, 242, 61);
   display: grid;
   justify-content: start;
-  width: 30%;
 }
 .misionVision .mision .tituloMision h1 {
   margin-left: 10px;
@@ -348,16 +379,17 @@ body {
   display: grid;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
 .misionVision .vision .tituloVision {
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgb(4, 47, 64);
   display: grid;
   justify-content: start;
-  width: 27%;
 }
 .misionVision .vision .tituloVision h1 {
   margin-left: 10px;
@@ -386,6 +418,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(4, 47, 64, 0.8);
 }
@@ -413,9 +446,11 @@ body {
 .nuestrosTrabajos .trabajo1 .trabajo {
   grid-area: desc;
   display: grid;
+  gap: 15px;
   grid-template-rows: auto auto;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -425,6 +460,7 @@ body {
   align-items: center;
   justify-items: center;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgb(4, 47, 64);
 }
@@ -479,9 +515,11 @@ body {
 .nuestrosTrabajos .trabajo2 .trabajo {
   grid-area: desc;
   display: grid;
+  gap: 15px;
   grid-template-rows: auto auto;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(4, 47, 64, 0.8);
 }
@@ -491,6 +529,7 @@ body {
   align-items: center;
   justify-items: center;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -543,9 +582,11 @@ body {
 .nuestrosTrabajos .trabajo3 .trabajo {
   grid-area: desc;
   display: grid;
+  gap: 15px;
   grid-template-rows: auto auto;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -555,6 +596,7 @@ body {
   align-items: center;
   justify-items: center;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgb(4, 47, 64);
 }
@@ -609,9 +651,11 @@ body {
 .nuestrosTrabajos .trabajo4 .trabajo {
   grid-area: desc;
   display: grid;
+  gap: 15px;
   grid-template-rows: auto auto;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(4, 47, 64, 0.8);
 }
@@ -621,6 +665,7 @@ body {
   align-items: center;
   justify-items: center;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 15px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -672,6 +717,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(118, 242, 61, 0.8);
 }
@@ -729,6 +775,7 @@ body {
   justify-items: center;
   padding: 20px;
   box-shadow: 5px 5px 10px 5px;
+  border-radius: 35px;
   border: 1.5px solid black;
   background-color: rgba(4, 47, 64, 0.8);
 }
@@ -786,14 +833,66 @@ body {
   }
 }
 .footer {
+  background-color: rgb(4, 47, 64);
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 20px;
-  background-color: rgba(27, 27, 27, 0.575);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: space-around;
+  color: whitesmoke;
+}
+.footer .footerLinks {
+  display: grid;
+  justify-items: center;
+}
+.footer .footerLinks ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer .footerLinks ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footer .footerLinks ul li a:hover {
+  color: rgb(118, 242, 61);
+}
+.footer .footerProductos {
+  display: grid;
+  justify-items: center;
+}
+.footer .footerProductos ul {
+  padding: 0px;
+}
+.footer .footerProductos ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer .footerProductos ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footer .footerProductos ul li a:hover {
+  color: rgb(118, 242, 61);
+}
+.footer .footerServicios {
+  display: grid;
+  justify-items: center;
+}
+.footer .footerServicios ul {
+  padding: 0px;
+}
+.footer .footerServicios ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer .footerServicios ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footer .footerServicios ul li a:hover {
+  color: rgb(118, 242, 61);
 }
 @media screen and (max-width: 991px) {
   .footer {
@@ -803,6 +902,7 @@ body {
 @media screen and (max-width: 580px) {
   .footer {
     display: grid;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     gap: 15px;
     position: relative;

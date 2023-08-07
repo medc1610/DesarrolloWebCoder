@@ -1,12 +1,76 @@
+@import "../elements/colors";
+@import "../elements/responsive";
+
 .footer{
+    
+    @include colorOpacidad(azulMarino, nula);
+
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background-color: rgba(27, 27, 27, 0.575);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-around;
+    color: whitesmoke;
+
+    .footerLinks{
+        display: grid;
+        justify-items: center;
+        ul{
+            li{
+                list-style: none;
+                margin-bottom: 10px;
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    &:hover{
+                        color: rgb(118, 242, 61);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerProductos{
+        display: grid;
+        justify-items: center;
+        ul{
+            padding: 0px;
+            li{
+                list-style: none;
+                margin-bottom: 10px;
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    &:hover{
+                        color: rgb(118, 242, 61);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerServicios{
+        display: grid;
+        justify-items: center;
+        ul{
+            padding: 0px;
+            li{
+                list-style: none;
+                margin-bottom: 10px;
+                
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    &:hover{
+                        color: rgb(118, 242, 61);
+                    }
+                }
+            }
+        }
+    }
+    
 
     @include responsive(m){
         position: relative;
@@ -14,6 +78,7 @@
 
     @include responsive(s){
         display: grid;
+        grid-template-columns: auto;
         grid-template-rows: auto auto auto;
         gap: 15px;
         position: relative;

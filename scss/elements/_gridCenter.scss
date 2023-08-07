@@ -27,6 +27,7 @@
     .trabajo{
         grid-area: desc;
         display: grid;
+        gap: 15px;
         grid-template-rows: auto auto;
          
         @include cuadroColor;
@@ -88,6 +89,7 @@
     .trabajo{
         grid-area: desc;
         display: grid;
+        gap: 15px;
         grid-template-rows: auto auto;
          
         @include cuadroColor;

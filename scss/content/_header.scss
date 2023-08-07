@@ -1,21 +1,112 @@
+@import "../elements/colors";
+@import "../elements/responsive";
+
 .header{
-    background-color: rgb(42, 44, 161);
+    display:grid;
+    grid-template-columns: auto auto 1fr;
     color: aliceblue;
     margin: 0px;
-    height: 50px;
+    height: 115px;
+    @include colorOpacidad(azulMarino, nula);
+
+    @include responsive(mm){
+        grid-template-columns: auto auto;
+    }
+
+    .logoPrincipal{
+        img{
+            width: 100px;
+            margin: 10px;
+        }
+    }
+
+    .tituloLogo{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 30px 30px;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        font-family: monospace;
+        h2{
+            font-weight: bolder;
+        }
+
+        @include responsive(mm){
+            display: none;
+        }
+    }
+
+    .redesSociales{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-items: center;
+        justify-content: end;
+        margin-left: 25px;
+        gap: 55px;
+        margin-right: 50px;
+        @include responsive(ms){
+            gap: 20px;
+        }
+
+        .logo{
+            i{
+                font-size: 35px;
+                color: whitesmoke;
+                &:hover{
+                    color: rgb(118, 242, 61);
+                }
+
+                @include responsive(xs){
+                    font-size: 25px;
+                }
+            }
+
+            
+        }   
+    }
 }
 
-.logoPrincipal{
-    margin: 0px;
+
+
+nav{    
+
+    .navbar{
+        @include colorOpacidad(azulMarino, nula);
+    }
+
+    @include colorOpacidad(azulMarino, nula);
+
+    .navbar-collapse {
+        justify-content: space-around ;
+    }
+
+    .navbar-nav{
+        padding: 0px;
+        &:hover{
+            @include colorOpacidad(verde4, nula);
+            .nav-item{
+                a{
+                    color: black !important;
+                    
+                }
+            }   
+           
+        }
+        .nav-item{
+            a{
+                color: whitesmoke !important;
+                font-family: monospace;
+                font-size: 20px;
+            }
+        }   
+    }
+
+    .navbar-toggler{
+        @include colorOpacidad(verde4, nula);
+    }
+
+   
 }
 
-.navbar-collapse {
-        justify-content: space-around;
-}
 
-.navbar-nav{
-    &:hover{
-        background-color: rgba(55, 0, 255, 0.37);
-        border-radius: 10px;
-    }   
-}
